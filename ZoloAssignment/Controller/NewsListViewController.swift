@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 protocol NewsDetailTextDelegate : class {
     func NewsDetailTextDelegate(title : String, body : String)
@@ -62,7 +61,9 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
     func postListCallCompleted(postList: [Post]) {
         if postList.count > 0 {
             postArray = postList
-            newListTableView.reloadData()
+            DispatchQueue.main.async {
+                self.newListTableView.reloadData()
+            }
         }
     }
     
@@ -70,6 +71,9 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
     func todoListCallCompleted(todoList : [Todo]) {
         if todoList.count > 0 {
             todoArray = todoList
+            DispatchQueue.main.async {
+                self.newListTableView.reloadData()
+            }
         }
         else {
             newsListPresenter.getTodoList()

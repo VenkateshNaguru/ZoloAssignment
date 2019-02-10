@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jsI-hH-X3i">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoListTableViewCellID" rowHeight="150" id="dwU-I3-FV9" customClass="TodoListTableViewCell" customModule="ZoloAssignment" customModuleProvider="target">
@@ -157,7 +157,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jsI-hH-X3i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Ia-Wp-1WQ"/>
+                            <constraint firstItem="jsI-hH-X3i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3Ia-Wp-1WQ"/>
                             <constraint firstItem="jsI-hH-X3i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h7C-fG-Yk1"/>
                             <constraint firstItem="jsI-hH-X3i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iGT-T3-Jgi"/>
                             <constraint firstItem="jsI-hH-X3i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sO7-Nb-I8Y"/>
@@ -182,20 +182,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watch" translatesAutoresizingMaskIntoConstraints="NO" id="lUf-Rs-FXA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="320"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="87q-GB-HaO"/>
+                                    <constraint firstAttribute="height" constant="350" id="87q-GB-HaO"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fBf-my-yfi">
-                                <rect key="frame" x="0.0" y="481" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="511" width="375" height="138"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="7Ez-eM-LTH"/>
+                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ego-cm-bRW">
-                                <rect key="frame" x="0.0" y="384" width="375" height="97"/>
+                                <rect key="frame" x="0.0" y="414" width="375" height="97"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="97" id="9vO-hl-Sy4"/>
@@ -224,7 +227,6 @@
                             <constraint firstItem="lUf-Rs-FXA" firstAttribute="top" secondItem="IE7-Xl-LTW" secondAttribute="top" id="Cdr-UJ-C3n"/>
                             <constraint firstItem="fBf-my-yfi" firstAttribute="trailing" secondItem="IE7-Xl-LTW" secondAttribute="trailing" id="E4k-Uw-rnu"/>
                             <constraint firstItem="lUf-Rs-FXA" firstAttribute="leading" secondItem="IE7-Xl-LTW" secondAttribute="leading" id="IMO-qK-cI8"/>
-                            <constraint firstItem="fBf-my-yfi" firstAttribute="bottom" secondItem="IE7-Xl-LTW" secondAttribute="bottom" constant="-66" id="KPF-an-LgP"/>
                             <constraint firstItem="ego-cm-bRW" firstAttribute="leading" secondItem="IE7-Xl-LTW" secondAttribute="leading" id="TqK-Qv-kES"/>
                             <constraint firstItem="LNq-LN-hgz" firstAttribute="leading" secondItem="IE7-Xl-LTW" secondAttribute="leading" id="VzR-K5-eI4"/>
                             <constraint firstItem="LNq-LN-hgz" firstAttribute="bottom" secondItem="IE7-Xl-LTW" secondAttribute="bottom" id="YB2-ib-Unc"/>

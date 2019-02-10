@@ -29,9 +29,9 @@ class NewsDetailViewController: UIViewController {
     
     func adjustUITextViewHeight(textView : UITextView)
     {
-        textView.translatesAutoresizingMaskIntoConstraints = true
-        textView.sizeToFit()
-        textView.isScrollEnabled = false
+        var frame = textView.frame
+        frame.size.height = textView.contentSize.height
+        textView.frame = frame
     }
     override func viewDidLoad() {
         super.viewDidLoad()
