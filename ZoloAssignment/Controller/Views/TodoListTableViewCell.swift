@@ -10,6 +10,7 @@ import UIKit
 
 class TodoListTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var todoListCollectionViewLayout: UICollectionViewFlowLayout!
     
     var todoArray = [Todo]()
     @IBOutlet weak var todoListCollectionView: UICollectionView!
@@ -18,6 +19,7 @@ class TodoListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.todoListCollectionView.delegate = self
         self.todoListCollectionView.dataSource = self
+        todoListCollectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,8 +44,8 @@ extension TodoListTableViewCell : UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = todoListCollectionView.dequeueReusableCell(withReuseIdentifier: "todoListCollectionViewCellID", for: indexPath) as! TodoListCollectionViewCell
         cell.todoLabel.text = todoArray[indexPath.row].title
-        cell.todoLabel.layer.cornerRadius = 10
-        cell.todoLabel.layer.masksToBounds = true
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
         return cell
     }
     

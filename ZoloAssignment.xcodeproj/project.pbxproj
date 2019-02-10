@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146EB0F72210158100CD2D12 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146EB0F62210158100CD2D12 /* NewsDetailViewController.swift */; };
 		148F1F5A220C89BF00EDC8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F59220C89BF00EDC8C8 /* AppDelegate.swift */; };
 		148F1F5C220C89BF00EDC8C8 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F5B220C89BF00EDC8C8 /* NewsListViewController.swift */; };
 		148F1F5F220C89BF00EDC8C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148F1F5D220C89BF00EDC8C8 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		146EB0F62210158100CD2D12 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		148F1F56220C89BF00EDC8C8 /* ZoloAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoloAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148F1F59220C89BF00EDC8C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		148F1F5B220C89BF00EDC8C8 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				146EB0F32210060F00CD2D12 /* Views */,
 				148F1F5B220C89BF00EDC8C8 /* NewsListViewController.swift */,
+				146EB0F62210158100CD2D12 /* NewsDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				148F1F5C220C89BF00EDC8C8 /* NewsListViewController.swift in Sources */,
 				148F1F5A220C89BF00EDC8C8 /* AppDelegate.swift in Sources */,
 				14BFF4C2220EFADA000FB836 /* PostListCollectionViewCell.swift in Sources */,
+				146EB0F72210158100CD2D12 /* NewsDetailViewController.swift in Sources */,
 				14BFF4BE220EF979000FB836 /* PostListTableViewCell.swift in Sources */,
 				148F1F62220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodeld in Sources */,
 				148F1F8F220C90FB00EDC8C8 /* NewsListPresenter.swift in Sources */,

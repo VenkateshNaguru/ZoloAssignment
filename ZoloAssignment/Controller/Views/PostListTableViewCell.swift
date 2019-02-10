@@ -8,14 +8,21 @@
 
 import UIKit
 
+protocol SelectedIndexDelegate : class {
+    func selectedIndexNewsDetailText(newsTitle : String, newsBody : String)
+}
+
 class PostListTableViewCell: UITableViewCell {
     var postArray = [Post]()
+    @IBOutlet weak var postListCollectionViewLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var postListCollectionView: UICollectionView!
+    weak var delegate : SelectedIndexDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.postListCollectionView.delegate = self
         self.postListCollectionView.dataSource = self
+        postListCollectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,9 +48,19 @@ extension PostListTableViewCell : UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = postListCollectionView.dequeueReusableCell(withReuseIdentifier: "postListCollectionViewCellID", for: indexPath) as! PostListCollectionViewCell
-        cell.postLabel.text = postArray[indexPath.row].body
+        cell.postLabel.text = postArray[indexPath.row].title
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
+        cell.layer.borderColor = UIColor.gray.cgColor
+        cell.layer.borderWidth = 1
         return cell
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.selectedIndexNewsDetailText(newsTitle : postArray[indexPath.row].title, newsBody : postArray[indexPath.row].body)
+    }
+    
     
     
 }

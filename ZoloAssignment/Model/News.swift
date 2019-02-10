@@ -14,6 +14,13 @@ struct Todo : Codable {
     var id : Int
     var title : String
     var completed : Bool
+    
+    init(userID : Int, id : Int, title : String, completed : Bool) {
+        self.userId = userID
+        self.id = id
+        self.title = title
+        self.completed = completed
+    }
 }
 
 struct Post : Codable {
@@ -21,4 +28,11 @@ struct Post : Codable {
     var id : Int
     var title : String
     var body : String
+    
+    init(userID : Int, id : Int, title : String, body : String) {
+        self.userId = userID
+        self.id = id
+        self.title = title
+        self.body = body
+    }
 }
