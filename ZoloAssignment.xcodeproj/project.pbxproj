@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		148F1F5A220C89BF00EDC8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F59220C89BF00EDC8C8 /* AppDelegate.swift */; };
+		148F1F5C220C89BF00EDC8C8 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F5B220C89BF00EDC8C8 /* NewsListViewController.swift */; };
+		148F1F5F220C89BF00EDC8C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148F1F5D220C89BF00EDC8C8 /* Main.storyboard */; };
+		148F1F62220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F60220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodeld */; };
+		148F1F64220C89C100EDC8C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148F1F63220C89C100EDC8C8 /* Assets.xcassets */; };
+		148F1F67220C89C100EDC8C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148F1F65220C89C100EDC8C8 /* LaunchScreen.storyboard */; };
+		148F1F72220C89C100EDC8C8 /* ZoloAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F71220C89C100EDC8C8 /* ZoloAssignmentTests.swift */; };
+		148F1F7D220C89C100EDC8C8 /* ZoloAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F7C220C89C100EDC8C8 /* ZoloAssignmentUITests.swift */; };
+		148F1F8F220C90FB00EDC8C8 /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F8E220C90FB00EDC8C8 /* NewsListPresenter.swift */; };
+		148F1F91220C917900EDC8C8 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F90220C917900EDC8C8 /* News.swift */; };
+		14BFF4BC220EF955000FB836 /* TodoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFF4BB220EF955000FB836 /* TodoListTableViewCell.swift */; };
+		14BFF4BE220EF979000FB836 /* PostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFF4BD220EF979000FB836 /* PostListTableViewCell.swift */; };
+		14BFF4C0220EFAC5000FB836 /* TodoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFF4BF220EFAC5000FB836 /* TodoListCollectionViewCell.swift */; };
+		14BFF4C2220EFADA000FB836 /* PostListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFF4C1220EFADA000FB836 /* PostListCollectionViewCell.swift */; };
+		3F1BB0EBC83C19F3765C9B5E /* Pods_ZoloAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62BD0D6B834D33AB6B3BB67 /* Pods_ZoloAssignmentUITests.framework */; };
+		EED340F422E2B58A5DF2463D /* Pods_ZoloAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A023D1C17EA0EA23E511D9AF /* Pods_ZoloAssignmentTests.framework */; };
+		F7D6842C65956E3D59489EB6 /* Pods_ZoloAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7B5BAF04693FF11198ECAF /* Pods_ZoloAssignment.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		148F1F6E220C89C100EDC8C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 148F1F4E220C89BF00EDC8C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 148F1F55220C89BF00EDC8C8;
+			remoteInfo = ZoloAssignment;
+		};
+		148F1F79220C89C100EDC8C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 148F1F4E220C89BF00EDC8C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 148F1F55220C89BF00EDC8C8;
+			remoteInfo = ZoloAssignment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		148F1F56220C89BF00EDC8C8 /* ZoloAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoloAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		148F1F59220C89BF00EDC8C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		148F1F5B220C89BF00EDC8C8 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		148F1F5E220C89BF00EDC8C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		148F1F61220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZoloAssignment.xcdatamodel; sourceTree = "<group>"; };
+		148F1F63220C89C100EDC8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		148F1F66220C89C100EDC8C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		148F1F68220C89C100EDC8C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		148F1F6D220C89C100EDC8C8 /* ZoloAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoloAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		148F1F71220C89C100EDC8C8 /* ZoloAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoloAssignmentTests.swift; sourceTree = "<group>"; };
+		148F1F73220C89C100EDC8C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		148F1F78220C89C100EDC8C8 /* ZoloAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoloAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		148F1F7C220C89C100EDC8C8 /* ZoloAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoloAssignmentUITests.swift; sourceTree = "<group>"; };
+		148F1F7E220C89C100EDC8C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		148F1F8E220C90FB00EDC8C8 /* NewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
+		148F1F90220C917900EDC8C8 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		14BFF4BB220EF955000FB836 /* TodoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewCell.swift; sourceTree = "<group>"; };
+		14BFF4BD220EF979000FB836 /* PostListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewCell.swift; sourceTree = "<group>"; };
+		14BFF4BF220EFAC5000FB836 /* TodoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCollectionViewCell.swift; sourceTree = "<group>"; };
+		14BFF4C1220EFADA000FB836 /* PostListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F7B5BAF04693FF11198ECAF /* Pods_ZoloAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoloAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		495DD351C05DA3C056F85A11 /* Pods-ZoloAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignment/Pods-ZoloAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		6DDE4DB1EAAE3AD1033B3432 /* Pods-ZoloAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignmentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignmentUITests/Pods-ZoloAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7FFA363C0C78B594B0305E13 /* Pods-ZoloAssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignmentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignmentUITests/Pods-ZoloAssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A023D1C17EA0EA23E511D9AF /* Pods_ZoloAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoloAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E55352A3826219D1AC97533D /* Pods-ZoloAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignment/Pods-ZoloAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		EEF357410660B07F7F774C4D /* Pods-ZoloAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignmentTests/Pods-ZoloAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F62BD0D6B834D33AB6B3BB67 /* Pods_ZoloAssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoloAssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6AA196365B11BA84F9C84D6 /* Pods-ZoloAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignmentTests/Pods-ZoloAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		148F1F53220C89BF00EDC8C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7D6842C65956E3D59489EB6 /* Pods_ZoloAssignment.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		148F1F6A220C89C100EDC8C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED340F422E2B58A5DF2463D /* Pods_ZoloAssignmentTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		148F1F75220C89C100EDC8C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1BB0EBC83C19F3765C9B5E /* Pods_ZoloAssignmentUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		146EB0F32210060F00CD2D12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14BFF4BB220EF955000FB836 /* TodoListTableViewCell.swift */,
+				14BFF4BF220EFAC5000FB836 /* TodoListCollectionViewCell.swift */,
+				14BFF4BD220EF979000FB836 /* PostListTableViewCell.swift */,
+				14BFF4C1220EFADA000FB836 /* PostListCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		148F1F4D220C89BF00EDC8C8 = {
+			isa = PBXGroup;
+			children = (
+				148F1F58220C89BF00EDC8C8 /* ZoloAssignment */,
+				148F1F70220C89C100EDC8C8 /* ZoloAssignmentTests */,
+				148F1F7B220C89C100EDC8C8 /* ZoloAssignmentUITests */,
+				148F1F57220C89BF00EDC8C8 /* Products */,
+				BF0C4B164F6EFBF5F9904BEC /* Pods */,
+				ECD1C2F38AE8E07D9F65157C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		148F1F57220C89BF00EDC8C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				148F1F56220C89BF00EDC8C8 /* ZoloAssignment.app */,
+				148F1F6D220C89C100EDC8C8 /* ZoloAssignmentTests.xctest */,
+				148F1F78220C89C100EDC8C8 /* ZoloAssignmentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		148F1F58220C89BF00EDC8C8 /* ZoloAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				148F1F59220C89BF00EDC8C8 /* AppDelegate.swift */,
+				148F1F8D220C8AF500EDC8C8 /* Model */,
+				148F1F8C220C8AEA00EDC8C8 /* Presenter */,
+				148F1F8B220C8ADE00EDC8C8 /* Controller */,
+				148F1F8A220C8A9600EDC8C8 /* Supported Files */,
+				148F1F5D220C89BF00EDC8C8 /* Main.storyboard */,
+				148F1F68220C89C100EDC8C8 /* Info.plist */,
+				148F1F60220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodeld */,
+			);
+			path = ZoloAssignment;
+			sourceTree = "<group>";
+		};
+		148F1F70220C89C100EDC8C8 /* ZoloAssignmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				148F1F71220C89C100EDC8C8 /* ZoloAssignmentTests.swift */,
+				148F1F73220C89C100EDC8C8 /* Info.plist */,
+			);
+			path = ZoloAssignmentTests;
+			sourceTree = "<group>";
+		};
+		148F1F7B220C89C100EDC8C8 /* ZoloAssignmentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				148F1F7C220C89C100EDC8C8 /* ZoloAssignmentUITests.swift */,
+				148F1F7E220C89C100EDC8C8 /* Info.plist */,
+			);
+			path = ZoloAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		148F1F8A220C8A9600EDC8C8 /* Supported Files */ = {
+			isa = PBXGroup;
+			children = (
+				148F1F65220C89C100EDC8C8 /* LaunchScreen.storyboard */,
+				148F1F63220C89C100EDC8C8 /* Assets.xcassets */,
+			);
+			path = "Supported Files";
+			sourceTree = "<group>";
+		};
+		148F1F8B220C8ADE00EDC8C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				146EB0F32210060F00CD2D12 /* Views */,
+				148F1F5B220C89BF00EDC8C8 /* NewsListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		148F1F8C220C8AEA00EDC8C8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				148F1F8E220C90FB00EDC8C8 /* NewsListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		148F1F8D220C8AF500EDC8C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				148F1F90220C917900EDC8C8 /* News.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF0C4B164F6EFBF5F9904BEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				495DD351C05DA3C056F85A11 /* Pods-ZoloAssignment.debug.xcconfig */,
+				E55352A3826219D1AC97533D /* Pods-ZoloAssignment.release.xcconfig */,
+				EEF357410660B07F7F774C4D /* Pods-ZoloAssignmentTests.debug.xcconfig */,
+				F6AA196365B11BA84F9C84D6 /* Pods-ZoloAssignmentTests.release.xcconfig */,
+				6DDE4DB1EAAE3AD1033B3432 /* Pods-ZoloAssignmentUITests.debug.xcconfig */,
+				7FFA363C0C78B594B0305E13 /* Pods-ZoloAssignmentUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ECD1C2F38AE8E07D9F65157C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F7B5BAF04693FF11198ECAF /* Pods_ZoloAssignment.framework */,
+				A023D1C17EA0EA23E511D9AF /* Pods_ZoloAssignmentTests.framework */,
+				F62BD0D6B834D33AB6B3BB67 /* Pods_ZoloAssignmentUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		148F1F55220C89BF00EDC8C8 /* ZoloAssignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 148F1F81220C89C100EDC8C8 /* Build configuration list for PBXNativeTarget "ZoloAssignment" */;
+			buildPhases = (
+				B673FA3A4EDB5B737CE6D805 /* [CP] Check Pods Manifest.lock */,
+				148F1F52220C89BF00EDC8C8 /* Sources */,
+				148F1F53220C89BF00EDC8C8 /* Frameworks */,
+				148F1F54220C89BF00EDC8C8 /* Resources */,
+				6E1AC83751A999C0A968F476 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZoloAssignment;
+			productName = ZoloAssignment;
+			productReference = 148F1F56220C89BF00EDC8C8 /* ZoloAssignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		148F1F6C220C89C100EDC8C8 /* ZoloAssignmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 148F1F84220C89C100EDC8C8 /* Build configuration list for PBXNativeTarget "ZoloAssignmentTests" */;
+			buildPhases = (
+				32E48E3A992DC09FE891707A /* [CP] Check Pods Manifest.lock */,
+				148F1F69220C89C100EDC8C8 /* Sources */,
+				148F1F6A220C89C100EDC8C8 /* Frameworks */,
+				148F1F6B220C89C100EDC8C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				148F1F6F220C89C100EDC8C8 /* PBXTargetDependency */,
+			);
+			name = ZoloAssignmentTests;
+			productName = ZoloAssignmentTests;
+			productReference = 148F1F6D220C89C100EDC8C8 /* ZoloAssignmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		148F1F77220C89C100EDC8C8 /* ZoloAssignmentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 148F1F87220C89C100EDC8C8 /* Build configuration list for PBXNativeTarget "ZoloAssignmentUITests" */;
+			buildPhases = (
+				43514BB7431EDB1BE62A0AE9 /* [CP] Check Pods Manifest.lock */,
+				148F1F74220C89C100EDC8C8 /* Sources */,
+				148F1F75220C89C100EDC8C8 /* Frameworks */,
+				148F1F76220C89C100EDC8C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				148F1F7A220C89C100EDC8C8 /* PBXTargetDependency */,
+			);
+			name = ZoloAssignmentUITests;
+			productName = ZoloAssignmentUITests;
+			productReference = 148F1F78220C89C100EDC8C8 /* ZoloAssignmentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		148F1F4E220C89BF00EDC8C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Venkatesh;
+				TargetAttributes = {
+					148F1F55220C89BF00EDC8C8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					148F1F6C220C89C100EDC8C8 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 148F1F55220C89BF00EDC8C8;
+					};
+					148F1F77220C89C100EDC8C8 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 148F1F55220C89BF00EDC8C8;
+					};
+				};
+			};
+			buildConfigurationList = 148F1F51220C89BF00EDC8C8 /* Build configuration list for PBXProject "ZoloAssignment" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 148F1F4D220C89BF00EDC8C8;
+			productRefGroup = 148F1F57220C89BF00EDC8C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				148F1F55220C89BF00EDC8C8 /* ZoloAssignment */,
+				148F1F6C220C89C100EDC8C8 /* ZoloAssignmentTests */,
+				148F1F77220C89C100EDC8C8 /* ZoloAssignmentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		148F1F54220C89BF00EDC8C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				148F1F67220C89C100EDC8C8 /* LaunchScreen.storyboard in Resources */,
+				148F1F64220C89C100EDC8C8 /* Assets.xcassets in Resources */,
+				148F1F5F220C89BF00EDC8C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		148F1F6B220C89C100EDC8C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		148F1F76220C89C100EDC8C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32E48E3A992DC09FE891707A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZoloAssignmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43514BB7431EDB1BE62A0AE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZoloAssignmentUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E1AC83751A999C0A968F476 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZoloAssignment/Pods-ZoloAssignment-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZoloAssignment/Pods-ZoloAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B673FA3A4EDB5B737CE6D805 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZoloAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		148F1F52220C89BF00EDC8C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14BFF4C0220EFAC5000FB836 /* TodoListCollectionViewCell.swift in Sources */,
+				148F1F5C220C89BF00EDC8C8 /* NewsListViewController.swift in Sources */,
+				148F1F5A220C89BF00EDC8C8 /* AppDelegate.swift in Sources */,
+				14BFF4C2220EFADA000FB836 /* PostListCollectionViewCell.swift in Sources */,
+				14BFF4BE220EF979000FB836 /* PostListTableViewCell.swift in Sources */,
+				148F1F62220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodeld in Sources */,
+				148F1F8F220C90FB00EDC8C8 /* NewsListPresenter.swift in Sources */,
+				148F1F91220C917900EDC8C8 /* News.swift in Sources */,
+				14BFF4BC220EF955000FB836 /* TodoListTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		148F1F69220C89C100EDC8C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				148F1F72220C89C100EDC8C8 /* ZoloAssignmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		148F1F74220C89C100EDC8C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				148F1F7D220C89C100EDC8C8 /* ZoloAssignmentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		148F1F6F220C89C100EDC8C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 148F1F55220C89BF00EDC8C8 /* ZoloAssignment */;
+			targetProxy = 148F1F6E220C89C100EDC8C8 /* PBXContainerItemProxy */;
+		};
+		148F1F7A220C89C100EDC8C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 148F1F55220C89BF00EDC8C8 /* ZoloAssignment */;
+			targetProxy = 148F1F79220C89C100EDC8C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		148F1F5D220C89BF00EDC8C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				148F1F5E220C89BF00EDC8C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		148F1F65220C89C100EDC8C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				148F1F66220C89C100EDC8C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		148F1F7F220C89C100EDC8C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		148F1F80220C89C100EDC8C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		148F1F82220C89C100EDC8C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 495DD351C05DA3C056F85A11 /* Pods-ZoloAssignment.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5FRPUKAWVR;
+				INFOPLIST_FILE = ZoloAssignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Venkatesh.ZoloAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		148F1F83220C89C100EDC8C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E55352A3826219D1AC97533D /* Pods-ZoloAssignment.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5FRPUKAWVR;
+				INFOPLIST_FILE = ZoloAssignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Venkatesh.ZoloAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		148F1F85220C89C100EDC8C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEF357410660B07F7F774C4D /* Pods-ZoloAssignmentTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5FRPUKAWVR;
+				INFOPLIST_FILE = ZoloAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Venkatesh.ZoloAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZoloAssignment.app/ZoloAssignment";
+			};
+			name = Debug;
+		};
+		148F1F86220C89C100EDC8C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6AA196365B11BA84F9C84D6 /* Pods-ZoloAssignmentTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5FRPUKAWVR;
+				INFOPLIST_FILE = ZoloAssignmentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Venkatesh.ZoloAssignmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZoloAssignment.app/ZoloAssignment";
+			};
+			name = Release;
+		};
+		148F1F88220C89C100EDC8C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DDE4DB1EAAE3AD1033B3432 /* Pods-ZoloAssignmentUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5FRPUKAWVR;
+				INFOPLIST_FILE = ZoloAssignmentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Venkatesh.ZoloAssignmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZoloAssignment;
+			};
+			name = Debug;
+		};
+		148F1F89220C89C100EDC8C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FFA363C0C78B594B0305E13 /* Pods-ZoloAssignmentUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5FRPUKAWVR;
+				INFOPLIST_FILE = ZoloAssignmentUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Venkatesh.ZoloAssignmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZoloAssignment;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		148F1F51220C89BF00EDC8C8 /* Build configuration list for PBXProject "ZoloAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148F1F7F220C89C100EDC8C8 /* Debug */,
+				148F1F80220C89C100EDC8C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		148F1F81220C89C100EDC8C8 /* Build configuration list for PBXNativeTarget "ZoloAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148F1F82220C89C100EDC8C8 /* Debug */,
+				148F1F83220C89C100EDC8C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		148F1F84220C89C100EDC8C8 /* Build configuration list for PBXNativeTarget "ZoloAssignmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148F1F85220C89C100EDC8C8 /* Debug */,
+				148F1F86220C89C100EDC8C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		148F1F87220C89C100EDC8C8 /* Build configuration list for PBXNativeTarget "ZoloAssignmentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148F1F88220C89C100EDC8C8 /* Debug */,
+				148F1F89220C89C100EDC8C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		148F1F60220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				148F1F61220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodel */,
+			);
+			currentVersion = 148F1F61220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodel */;
+			path = ZoloAssignment.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 148F1F4E220C89BF00EDC8C8 /* Project object */;
+}
