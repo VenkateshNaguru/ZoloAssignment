@@ -22,6 +22,7 @@
 		14BFF4C0220EFAC5000FB836 /* TodoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFF4BF220EFAC5000FB836 /* TodoListCollectionViewCell.swift */; };
 		14BFF4C2220EFADA000FB836 /* PostListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFF4C1220EFADA000FB836 /* PostListCollectionViewCell.swift */; };
 		14EC9E2122116E80009A413F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EC9E2022116E80009A413F /* Main.storyboard */; };
+		14EF688D2211763E0060CD0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EF688C2211763E0060CD0F /* Constants.swift */; };
 		3F1BB0EBC83C19F3765C9B5E /* Pods_ZoloAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62BD0D6B834D33AB6B3BB67 /* Pods_ZoloAssignmentUITests.framework */; };
 		EED340F422E2B58A5DF2463D /* Pods_ZoloAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A023D1C17EA0EA23E511D9AF /* Pods_ZoloAssignmentTests.framework */; };
 		F7D6842C65956E3D59489EB6 /* Pods_ZoloAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7B5BAF04693FF11198ECAF /* Pods_ZoloAssignment.framework */; };
@@ -66,6 +67,7 @@
 		14BFF4BF220EFAC5000FB836 /* TodoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		14BFF4C1220EFADA000FB836 /* PostListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCollectionViewCell.swift; sourceTree = "<group>"; };
 		14EC9E2022116E80009A413F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		14EF688C2211763E0060CD0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2F7B5BAF04693FF11198ECAF /* Pods_ZoloAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoloAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		495DD351C05DA3C056F85A11 /* Pods-ZoloAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignment/Pods-ZoloAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		6DDE4DB1EAAE3AD1033B3432 /* Pods-ZoloAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignmentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignmentUITests/Pods-ZoloAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		148F1F8A220C8A9600EDC8C8 /* Supported Files */ = {
 			isa = PBXGroup;
 			children = (
+				14EF688C2211763E0060CD0F /* Constants.swift */,
 				148F1F65220C89C100EDC8C8 /* LaunchScreen.storyboard */,
 				148F1F63220C89C100EDC8C8 /* Assets.xcassets */,
 			);
@@ -365,15 +368,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ZoloAssignmentTests-checkManifestLockResult.txt",
 			);
@@ -387,15 +386,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ZoloAssignmentUITests-checkManifestLockResult.txt",
 			);
@@ -409,17 +404,15 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZoloAssignment/Pods-ZoloAssignment-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -431,15 +424,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ZoloAssignment-checkManifestLockResult.txt",
 			);
@@ -456,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14BFF4C0220EFAC5000FB836 /* TodoListCollectionViewCell.swift in Sources */,
+				14EF688D2211763E0060CD0F /* Constants.swift in Sources */,
 				148F1F5C220C89BF00EDC8C8 /* NewsListViewController.swift in Sources */,
 				148F1F5A220C89BF00EDC8C8 /* AppDelegate.swift in Sources */,
 				14BFF4C2220EFADA000FB836 /* PostListCollectionViewCell.swift in Sources */,

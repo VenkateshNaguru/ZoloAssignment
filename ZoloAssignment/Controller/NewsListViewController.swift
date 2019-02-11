@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 protocol NewsDetailTextDelegate : class {
     func NewsDetailTextDelegate(title : String, body : String)
@@ -19,7 +20,7 @@ class NewsListViewController: UIViewController {
     var selectedIndexString = ""
     @IBOutlet private weak var newListTableView: UITableView!
     weak var delegate : NewsDetailTextDelegate?
-    
+    var hud : MBProgressHUD?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,6 +28,9 @@ class NewsListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         newsListPresenter.delegate = self
+        hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        hud?.labelText = "Loading..."
+        hud?.detailsLabelText = "Please wait..."
         DispatchQueue.global(qos: .userInitiated).sync {
             self.newsListPresenter.loadNewsFromDB()
         }
@@ -51,6 +55,8 @@ class NewsListViewController: UIViewController {
     
 }
 
+// MARK - Table View and Api calls delegates
+
 extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, TodoListDelegate, SelectedIndexDelegate {
     func selectedIndexNewsDetailText(newsTitle: String, newsBody: String) {
         self.delegate?.NewsDetailTextDelegate(title : newsTitle, body : newsBody)
@@ -63,6 +69,7 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
             postArray = postList
             DispatchQueue.main.async {
                 self.newListTableView.reloadData()
+                self.hud?.hide(true)
             }
         }
     }
@@ -73,13 +80,15 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
             todoArray = todoList
             DispatchQueue.main.async {
                 self.newListTableView.reloadData()
+                self.hud?.hide(true)
             }
         }
         else {
             newsListPresenter.getTodoList()
             newsListPresenter.getPostList()
         }
-
+        newsListPresenter.getTodoList()
+        newsListPresenter.getPostList()
     }
     
     

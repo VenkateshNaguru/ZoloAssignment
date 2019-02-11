@@ -14,7 +14,7 @@ protocol SelectedIndexDelegate : class {
 
 class PostListTableViewCell: UITableViewCell {
     var postArray = [Post]()
-    @IBOutlet weak var postListCollectionViewLayout: UICollectionViewFlowLayout!
+    @IBOutlet private weak var postListCollectionViewLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var postListCollectionView: UICollectionView!
     weak var delegate : SelectedIndexDelegate?
     

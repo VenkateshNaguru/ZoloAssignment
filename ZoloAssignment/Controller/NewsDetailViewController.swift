@@ -27,7 +27,7 @@ class NewsDetailViewController: UIViewController {
         }
     }
     
-    func adjustUITextViewHeight(textView : UITextView)
+    private func adjustUITextViewHeight(textView : UITextView)
     {
         var frame = textView.frame
         frame.size.height = textView.contentSize.height

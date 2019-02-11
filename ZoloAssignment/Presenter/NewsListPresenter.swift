@@ -20,11 +20,11 @@ struct NewsListPresenter {
     weak var delegate : TodoListDelegate?
     
     func getTodoList() {
-        Alamofire.request("https://jsonplaceholder.typicode.com/todos").responseJSON { (response) in
-            if response.result.description == "SUCCESS" {
+        Alamofire.request(TODO_LIST_API).responseJSON { (response) in
+            if response.result.isSuccess {
                 do {
                     let newsListArray = try JSONDecoder().decode([Todo].self, from: response.data!)
-                    print(newsListArray)
+//                    print(newsListArray)
                     self.delegate?.todoListCallCompleted(todoList: newsListArray)
                     self.saveTodoListToCoreData(todoListArray: newsListArray)
                 }
@@ -37,12 +37,12 @@ struct NewsListPresenter {
     
     
     func getPostList() {
-        Alamofire.request("https://jsonplaceholder.typicode.com/posts").responseJSON { (response) in
-            if response.result.description == "SUCCESS" {
+        Alamofire.request(POST_LIST_API).responseJSON { (response) in
+            if response.result.isSuccess {
                 do {
                     let postListArray = try JSONDecoder().decode([Post].self, from: response.data!)
                     self.delegate?.postListCallCompleted(postList: postListArray)
-                    print(postListArray)
+//                    print(postListArray)
                     self.savePostListToCoreData(postListArray: postListArray)
                 }
                 catch let error {
@@ -52,6 +52,8 @@ struct NewsListPresenter {
         }
     }
     
+    
+    // MARK - save todoList to database
     
     func saveTodoListToCoreData(todoListArray : [Todo]) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -74,6 +76,8 @@ struct NewsListPresenter {
         }
     }
     
+    // MARK - save postList to database
+    
     func savePostListToCoreData(postListArray : [Post]) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -95,7 +99,7 @@ struct NewsListPresenter {
         }
     }
     
-    
+    // MARK - load data from database
     func loadNewsFromDB() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext

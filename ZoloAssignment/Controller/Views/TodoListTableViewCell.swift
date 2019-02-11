@@ -10,7 +10,7 @@ import UIKit
 
 class TodoListTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var todoListCollectionViewLayout: UICollectionViewFlowLayout!
+    @IBOutlet private weak var todoListCollectionViewLayout: UICollectionViewFlowLayout!
     
     var todoArray = [Todo]()
     @IBOutlet weak var todoListCollectionView: UICollectionView!
