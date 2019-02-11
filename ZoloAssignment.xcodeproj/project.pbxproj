@@ -10,7 +10,6 @@
 		146EB0F72210158100CD2D12 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146EB0F62210158100CD2D12 /* NewsDetailViewController.swift */; };
 		148F1F5A220C89BF00EDC8C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F59220C89BF00EDC8C8 /* AppDelegate.swift */; };
 		148F1F5C220C89BF00EDC8C8 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F5B220C89BF00EDC8C8 /* NewsListViewController.swift */; };
-		148F1F5F220C89BF00EDC8C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148F1F5D220C89BF00EDC8C8 /* Main.storyboard */; };
 		148F1F62220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 148F1F60220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodeld */; };
 		148F1F64220C89C100EDC8C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148F1F63220C89C100EDC8C8 /* Assets.xcassets */; };
 		148F1F67220C89C100EDC8C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148F1F65220C89C100EDC8C8 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,7 @@
 		14BFF4BE220EF979000FB836 /* PostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFF4BD220EF979000FB836 /* PostListTableViewCell.swift */; };
 		14BFF4C0220EFAC5000FB836 /* TodoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFF4BF220EFAC5000FB836 /* TodoListCollectionViewCell.swift */; };
 		14BFF4C2220EFADA000FB836 /* PostListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFF4C1220EFADA000FB836 /* PostListCollectionViewCell.swift */; };
+		14EC9E2122116E80009A413F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EC9E2022116E80009A413F /* Main.storyboard */; };
 		3F1BB0EBC83C19F3765C9B5E /* Pods_ZoloAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62BD0D6B834D33AB6B3BB67 /* Pods_ZoloAssignmentUITests.framework */; };
 		EED340F422E2B58A5DF2463D /* Pods_ZoloAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A023D1C17EA0EA23E511D9AF /* Pods_ZoloAssignmentTests.framework */; };
 		F7D6842C65956E3D59489EB6 /* Pods_ZoloAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F7B5BAF04693FF11198ECAF /* Pods_ZoloAssignment.framework */; };
@@ -49,7 +49,6 @@
 		148F1F56220C89BF00EDC8C8 /* ZoloAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoloAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148F1F59220C89BF00EDC8C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		148F1F5B220C89BF00EDC8C8 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
-		148F1F5E220C89BF00EDC8C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		148F1F61220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZoloAssignment.xcdatamodel; sourceTree = "<group>"; };
 		148F1F63220C89C100EDC8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		148F1F66220C89C100EDC8C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		14BFF4BD220EF979000FB836 /* PostListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewCell.swift; sourceTree = "<group>"; };
 		14BFF4BF220EFAC5000FB836 /* TodoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		14BFF4C1220EFADA000FB836 /* PostListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCollectionViewCell.swift; sourceTree = "<group>"; };
+		14EC9E2022116E80009A413F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2F7B5BAF04693FF11198ECAF /* Pods_ZoloAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZoloAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		495DD351C05DA3C056F85A11 /* Pods-ZoloAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignment/Pods-ZoloAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		6DDE4DB1EAAE3AD1033B3432 /* Pods-ZoloAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZoloAssignmentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZoloAssignmentUITests/Pods-ZoloAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 				148F1F8C220C8AEA00EDC8C8 /* Presenter */,
 				148F1F8B220C8ADE00EDC8C8 /* Controller */,
 				148F1F8A220C8A9600EDC8C8 /* Supported Files */,
-				148F1F5D220C89BF00EDC8C8 /* Main.storyboard */,
+				14EC9E2022116E80009A413F /* Main.storyboard */,
 				148F1F68220C89C100EDC8C8 /* Info.plist */,
 				148F1F60220C89BF00EDC8C8 /* ZoloAssignment.xcdatamodeld */,
 			);
@@ -337,9 +337,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14EC9E2122116E80009A413F /* Main.storyboard in Resources */,
 				148F1F67220C89C100EDC8C8 /* LaunchScreen.storyboard in Resources */,
 				148F1F64220C89C100EDC8C8 /* Assets.xcassets in Resources */,
-				148F1F5F220C89BF00EDC8C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,14 +500,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		148F1F5D220C89BF00EDC8C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				148F1F5E220C89BF00EDC8C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		148F1F65220C89C100EDC8C8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
