@@ -8,6 +8,8 @@
 
 import UIKit
 
+let todoListCollectionViewCellID = "todoListCollectionViewCellID"
+
 class TodoListTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var todoListCollectionViewLayout: UICollectionViewFlowLayout!
@@ -42,7 +44,7 @@ extension TodoListTableViewCell : UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = todoListCollectionView.dequeueReusableCell(withReuseIdentifier: "todoListCollectionViewCellID", for: indexPath) as! TodoListCollectionViewCell
+        let cell = todoListCollectionView.dequeueReusableCell(withReuseIdentifier: todoListCollectionViewCellID, for: indexPath) as! TodoListCollectionViewCell
         cell.todoLabel.text = todoArray[indexPath.row].title
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true

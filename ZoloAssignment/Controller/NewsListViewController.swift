@@ -9,6 +9,10 @@
 import UIKit
 import MBProgressHUD
 
+
+let todoListCellID = "todoListTableViewCellID"
+let postListCellID = "postListTableViewCellID"
+
 protocol NewsDetailTextDelegate : class {
     func NewsDetailTextDelegate(title : String, body : String)
 }
@@ -28,20 +32,20 @@ class NewsListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         newsListPresenter.delegate = self
-        hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-        hud?.labelText = "Loading..."
-        hud?.detailsLabelText = "Please wait..."
-        DispatchQueue.global(qos: .userInitiated).sync {
-            self.newsListPresenter.loadNewsFromDB()
-        }
         self.newListTableView.separatorStyle = .none
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        newListTableView.register(TodoListTableViewCell.self, forCellReuseIdentifier: "todoListTableViewCellID")
-        newListTableView.register(PostListTableViewCell.self, forCellReuseIdentifier: "postListTableViewCellID")
+        hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        hud?.labelText = "Loading..."
+        hud?.detailsLabelText = "Please wait..."
+        DispatchQueue.global(qos: .userInitiated).sync {
+            self.newsListPresenter.loadNewsFromDB()
+        }
+        newListTableView.register(TodoListTableViewCell.self, forCellReuseIdentifier: todoListCellID)
+        newListTableView.register(PostListTableViewCell.self, forCellReuseIdentifier: postListCellID)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -58,24 +62,13 @@ class NewsListViewController: UIViewController {
 // MARK - Table View and Api calls delegates
 
 extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, TodoListDelegate, SelectedIndexDelegate {
-    func selectedIndexNewsDetailText(newsTitle: String, newsBody: String) {
-        self.delegate?.NewsDetailTextDelegate(title : newsTitle, body : newsBody)
-    }
     
-    
-    
-    func postListCallCompleted(postList: [Post]) {
-        if postList.count > 0 {
-            postArray = postList
-            DispatchQueue.main.async {
-                self.newListTableView.reloadData()
-                self.hud?.hide(true)
-            }
+    func todoListCallCompleted(todoList: [Todo], error: String?) {
+        
+        if error != nil {
+            self.showAlert(message: error!)
+            return
         }
-    }
-    
-    
-    func todoListCallCompleted(todoList : [Todo]) {
         if todoList.count > 0 {
             todoArray = todoList
             DispatchQueue.main.async {
@@ -87,8 +80,24 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
             newsListPresenter.getTodoList()
             newsListPresenter.getPostList()
         }
-        newsListPresenter.getTodoList()
-        newsListPresenter.getPostList()
+    }
+    
+    func postListCallCompleted(postList: [Post], error: String?) {
+        if error != nil {
+            self.showAlert(message: error!)
+            return
+        }
+        if postList.count > 0 {
+            postArray = postList
+            DispatchQueue.main.async {
+                self.newListTableView.reloadData()
+                self.hud?.hide(true)
+            }
+        }
+    }
+    
+    func selectedIndexNewsDetailText(newsTitle: String, newsBody: String) {
+        self.delegate?.NewsDetailTextDelegate(title : newsTitle, body : newsBody)
     }
     
     
@@ -112,13 +121,13 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = newListTableView.dequeueReusableCell(withIdentifier: "todoListTableViewCellID", for: indexPath) as! TodoListTableViewCell
+            let cell = newListTableView.dequeueReusableCell(withIdentifier: todoListCellID, for: indexPath) as! TodoListTableViewCell
             cell.todoArray = todoArray
             cell.todoListCollectionView.reloadData()
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "postListTableViewCellID", for: indexPath) as! PostListTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: postListCellID, for: indexPath) as! PostListTableViewCell
             cell.postArray = postArray
             cell.postListCollectionView.reloadData()
             cell.delegate = self
@@ -142,6 +151,14 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
         else {
             return "Text Data with Image"
         }
+    }
+    
+    
+    func showAlert(message : String) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

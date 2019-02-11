@@ -11,8 +11,8 @@ import Alamofire
 import CoreData
 
 protocol TodoListDelegate : class {
-    func todoListCallCompleted(todoList : [Todo])
-    func postListCallCompleted(postList : [Post])
+    func todoListCallCompleted(todoList : [Todo], error : String?)
+    func postListCallCompleted(postList : [Post], error : String?)
 }
 
 struct NewsListPresenter {
@@ -22,14 +22,15 @@ struct NewsListPresenter {
     func getTodoList() {
         Alamofire.request(TODO_LIST_API).responseJSON { (response) in
             if response.result.isSuccess {
+                var newsListArray = [Todo]()
                 do {
-                    let newsListArray = try JSONDecoder().decode([Todo].self, from: response.data!)
+                    newsListArray = try JSONDecoder().decode([Todo].self, from: response.data!)
 //                    print(newsListArray)
-                    self.delegate?.todoListCallCompleted(todoList: newsListArray)
+                    self.delegate?.todoListCallCompleted(todoList: newsListArray, error: nil)
                     self.saveTodoListToCoreData(todoListArray: newsListArray)
                 }
                 catch let error {
-                    print(error)
+                    self.delegate?.todoListCallCompleted(todoList: newsListArray, error: error.localizedDescription)
                 }
             }
         }
@@ -39,14 +40,16 @@ struct NewsListPresenter {
     func getPostList() {
         Alamofire.request(POST_LIST_API).responseJSON { (response) in
             if response.result.isSuccess {
+                var postListArray = [Post]()
                 do {
-                    let postListArray = try JSONDecoder().decode([Post].self, from: response.data!)
-                    self.delegate?.postListCallCompleted(postList: postListArray)
+                    postListArray = try JSONDecoder().decode([Post].self, from: response.data!)
+                    self.delegate?.postListCallCompleted(postList: postListArray, error: nil)
 //                    print(postListArray)
                     self.savePostListToCoreData(postListArray: postListArray)
                 }
                 catch let error {
                     print(error)
+                    self.delegate?.postListCallCompleted(postList: postListArray, error: error.localizedDescription)
                 }
             }
         }
@@ -107,28 +110,30 @@ struct NewsListPresenter {
         let postRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "PostEntity")
         todoRequest.returnsObjectsAsFaults = false
         postRequest.returnsObjectsAsFaults = false
+        var todoArray = [Todo]()
         do {
             let result = try context.fetch(todoRequest) as! [TodoEntity]
-            var todoArray = [Todo]()
             for eachElement in result {
                 let todo = Todo(userID: Int(eachElement.userId), id: Int(eachElement.id), title: eachElement.title!, completed: eachElement.completed)
                 todoArray.append(todo)
             }
-            self.delegate?.todoListCallCompleted(todoList: todoArray)
+            self.delegate?.todoListCallCompleted(todoList: todoArray, error: nil)
         } catch {
             print("Failed")
+            self.delegate?.todoListCallCompleted(todoList: todoArray, error: "Failed to fetch data")
         }
-        
+         var postArray = [Post]()
         do {
             let result = try context.fetch(postRequest) as! [PostEntity]
-            var postArray = [Post]()
+           
             for eachElement in result {
                 let post = Post(userID: Int(eachElement.userId), id: Int(eachElement.id), title: eachElement.title!, body: eachElement.body!)
                 postArray.append(post)
             }
-            self.delegate?.postListCallCompleted(postList: postArray)
+            self.delegate?.postListCallCompleted(postList: postArray, error: nil)
         } catch {
             print("Failed")
+            self.delegate?.postListCallCompleted(postList: postArray, error: "Failed to fetch data")
         }
     }
 }

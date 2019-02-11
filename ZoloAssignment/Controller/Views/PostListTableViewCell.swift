@@ -8,6 +8,8 @@
 
 import UIKit
 
+let postListCollectionViewCellID = "postListCollectionViewCellID"
+
 protocol SelectedIndexDelegate : class {
     func selectedIndexNewsDetailText(newsTitle : String, newsBody : String)
 }
@@ -47,7 +49,7 @@ extension PostListTableViewCell : UICollectionViewDataSource, UICollectionViewDe
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = postListCollectionView.dequeueReusableCell(withReuseIdentifier: "postListCollectionViewCellID", for: indexPath) as! PostListCollectionViewCell
+        let cell = postListCollectionView.dequeueReusableCell(withReuseIdentifier: postListCollectionViewCellID, for: indexPath) as! PostListCollectionViewCell
         cell.postLabel.text = postArray[indexPath.row].title
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
