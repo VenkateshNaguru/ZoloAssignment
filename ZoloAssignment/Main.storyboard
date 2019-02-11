@@ -182,56 +182,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="334.5" image="watch" translatesAutoresizingMaskIntoConstraints="NO" id="lUf-Rs-FXA">
-                                <rect key="frame" x="0.0" y="64" width="320" height="201.5"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="252"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ego-cm-bRW">
-                                <rect key="frame" x="0.0" y="265.5" width="320" height="101"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. re eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fBf-my-yfi">
-                                <rect key="frame" x="0.0" y="366.5" width="320" height="151"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNq-LN-hgz">
-                                <rect key="frame" x="0.0" y="517.5" width="320" height="51"/>
+                                <rect key="frame" x="0.0" y="507.5" width="320" height="60.5"/>
                                 <color key="backgroundColor" red="0.24656139960000001" green="0.55537522009999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <state key="normal" title="APPRECIATE IT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cV-6Q-2Ny">
+                                <rect key="frame" x="0.0" y="316" width="320" height="191.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LNq-LN-hgz" firstAttribute="top" secondItem="fBf-my-yfi" secondAttribute="bottom" id="0Ni-ae-pwl"/>
-                            <constraint firstItem="ego-cm-bRW" firstAttribute="leading" secondItem="IE7-Xl-LTW" secondAttribute="leading" id="AIn-8x-tCL"/>
-                            <constraint firstItem="lUf-Rs-FXA" firstAttribute="height" secondItem="IE7-Xl-LTW" secondAttribute="height" multiplier="0.4" id="Bbm-YT-qHM"/>
-                            <constraint firstItem="ego-cm-bRW" firstAttribute="height" secondItem="IE7-Xl-LTW" secondAttribute="height" multiplier="0.2" id="CTO-YY-zP1"/>
-                            <constraint firstItem="ego-cm-bRW" firstAttribute="top" secondItem="lUf-Rs-FXA" secondAttribute="bottom" id="F3h-Vr-727"/>
-                            <constraint firstItem="ego-cm-bRW" firstAttribute="top" secondItem="lUf-Rs-FXA" secondAttribute="bottom" id="Tnj-E4-6lJ"/>
-                            <constraint firstItem="LNq-LN-hgz" firstAttribute="trailing" secondItem="IE7-Xl-LTW" secondAttribute="trailing" id="Wwc-aY-F2z"/>
-                            <constraint firstItem="ego-cm-bRW" firstAttribute="trailing" secondItem="IE7-Xl-LTW" secondAttribute="trailing" id="X1S-oM-PcA"/>
+                            <constraint firstItem="lUf-Rs-FXA" firstAttribute="height" secondItem="IE7-Xl-LTW" secondAttribute="height" multiplier="0.5" id="Bbm-YT-qHM"/>
+                            <constraint firstItem="LNq-LN-hgz" firstAttribute="top" secondItem="3cV-6Q-2Ny" secondAttribute="bottom" id="GBL-6V-bS8"/>
+                            <constraint firstItem="LNq-LN-hgz" firstAttribute="top" secondItem="3cV-6Q-2Ny" secondAttribute="bottom" id="JZR-t9-JWj"/>
+                            <constraint firstItem="LNq-LN-hgz" firstAttribute="height" secondItem="IE7-Xl-LTW" secondAttribute="height" multiplier="0.12" id="VaZ-ct-BQv"/>
+                            <constraint firstItem="3cV-6Q-2Ny" firstAttribute="trailing" secondItem="IE7-Xl-LTW" secondAttribute="trailing" id="Wue-yh-KCi"/>
+                            <constraint firstItem="IE7-Xl-LTW" firstAttribute="bottom" secondItem="LNq-LN-hgz" secondAttribute="bottom" id="dVe-dL-7N0"/>
                             <constraint firstItem="lUf-Rs-FXA" firstAttribute="trailing" secondItem="IE7-Xl-LTW" secondAttribute="trailing" id="e4d-EI-8M0"/>
-                            <constraint firstItem="fBf-my-yfi" firstAttribute="height" secondItem="IE7-Xl-LTW" secondAttribute="height" multiplier="0.3" id="eGf-la-jcw"/>
                             <constraint firstItem="lUf-Rs-FXA" firstAttribute="top" secondItem="IE7-Xl-LTW" secondAttribute="top" id="fBe-iL-rhu"/>
-                            <constraint firstItem="fBf-my-yfi" firstAttribute="trailing" secondItem="IE7-Xl-LTW" secondAttribute="trailing" id="htT-nu-VF7"/>
-                            <constraint firstItem="LNq-LN-hgz" firstAttribute="leading" secondItem="IE7-Xl-LTW" secondAttribute="leading" id="mhc-MN-MYI"/>
+                            <constraint firstItem="LNq-LN-hgz" firstAttribute="leading" secondItem="IE7-Xl-LTW" secondAttribute="leading" id="jYX-hl-g10"/>
+                            <constraint firstItem="3cV-6Q-2Ny" firstAttribute="top" secondItem="lUf-Rs-FXA" secondAttribute="bottom" id="lHX-BB-ip5"/>
+                            <constraint firstItem="LNq-LN-hgz" firstAttribute="trailing" secondItem="IE7-Xl-LTW" secondAttribute="trailing" id="lIV-jR-9kP"/>
                             <constraint firstItem="lUf-Rs-FXA" firstAttribute="leading" secondItem="IE7-Xl-LTW" secondAttribute="leading" id="nEh-PD-f6L"/>
-                            <constraint firstItem="LNq-LN-hgz" firstAttribute="height" secondItem="IE7-Xl-LTW" secondAttribute="height" multiplier="0.2" constant="-49.800000000000011" id="rOF-4c-gHO"/>
-                            <constraint firstItem="fBf-my-yfi" firstAttribute="top" secondItem="ego-cm-bRW" secondAttribute="bottom" id="tte-LY-4ri"/>
-                            <constraint firstItem="fBf-my-yfi" firstAttribute="leading" secondItem="IE7-Xl-LTW" secondAttribute="leading" id="vWW-Y9-uay"/>
+                            <constraint firstItem="3cV-6Q-2Ny" firstAttribute="height" secondItem="IE7-Xl-LTW" secondAttribute="height" multiplier="0.38" id="vHH-XB-sj5"/>
+                            <constraint firstItem="3cV-6Q-2Ny" firstAttribute="leading" secondItem="IE7-Xl-LTW" secondAttribute="leading" id="vyQ-SX-O0G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IE7-Xl-LTW"/>
                     </view>
                     <connections>
-                        <outlet property="newsDetailTextView" destination="fBf-my-yfi" id="bvf-HS-wT6"/>
-                        <outlet property="newsTitleView" destination="ego-cm-bRW" id="r9r-yw-BCW"/>
+                        <outlet property="newsDetailLabel" destination="3cV-6Q-2Ny" id="NlG-V4-oTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYy-rt-Vm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -244,6 +232,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ARS-cd-lcX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UUv-0l-kvb">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>

@@ -17,7 +17,6 @@ class NewsListViewController: UIViewController {
     private(set) var todoArray = [Todo]()
     private(set) var postArray = [Post]()
     private var newsListPresenter = NewsListPresenter()
-    var selectedIndexString = ""
     @IBOutlet private weak var newListTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +31,7 @@ class NewsListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         DispatchQueue.global(qos: .userInitiated).sync {
             self.newsListPresenter.loadNewsFromDB()
         }
@@ -54,7 +54,7 @@ class NewsListViewController: UIViewController {
 
 // MARK - Table View and Api calls delegates
 
-extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, TodoListDelegate, SelectedIndexDelegate {
+extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, NewsListDelegate, SelectedIndexDelegate {
     
     func todoListCallCompleted(todoList: [Todo], error: String?) {
         
@@ -69,8 +69,10 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
             }
         }
         else {
-            newsListPresenter.getTodoList()
-            newsListPresenter.getPostList()
+            DispatchQueue.global(qos: .userInitiated).sync {
+                newsListPresenter.getTodoList()
+                newsListPresenter.getPostList()
+            }
         }
     }
     
@@ -87,7 +89,7 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
         }
     }
     
-    func selectedIndexNewsDetailText(newsTitle: String, newsBody: String) {
+    func selectedIndexNewsDetail(newsTitle: String, newsBody: String) {
         performSegue(withIdentifier: "newsDetailSegue", sender: (newsTitle, newsBody))
     }
     

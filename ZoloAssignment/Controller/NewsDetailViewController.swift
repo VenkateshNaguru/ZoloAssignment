@@ -13,26 +13,19 @@ class NewsDetailViewController: UIViewController {
     var newsTitleString = ""
     var newsBodyString = ""
     
-    @IBOutlet private weak var newsTitleView: UITextView! {
+    
+    @IBOutlet weak var newsDetailLabel: UILabel! {
         didSet {
-            newsTitleView.text = newsTitleString
-            adjustUITextViewHeight(textView: newsTitleView)
-        }
-    }
-
-    @IBOutlet private weak var newsDetailTextView: UITextView! {
-        didSet {
-            newsDetailTextView.text = newsBodyString
-            adjustUITextViewHeight(textView: newsDetailTextView)
+            let fontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 28)]
+            let newsString = NSMutableAttributedString(string: " \(newsTitleString) \n ", attributes: fontAttribute as [NSAttributedString.Key : Any] )
+            let fontAttributeDetail = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+            let bodyString = NSMutableAttributedString(string: newsBodyString, attributes: fontAttributeDetail as [NSAttributedString.Key : Any] )
+            newsString.append(bodyString)
+            newsDetailLabel.attributedText = newsString
+            newsDetailLabel.sizeToFit()
         }
     }
     
-    private func adjustUITextViewHeight(textView : UITextView)
-    {
-        var frame = textView.frame
-        frame.size.height = textView.contentSize.height
-        textView.frame = frame
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

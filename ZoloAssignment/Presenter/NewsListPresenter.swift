@@ -10,24 +10,24 @@ import Foundation
 import Alamofire
 import CoreData
 
-protocol TodoListDelegate : class {
+protocol NewsListDelegate : class {
     func todoListCallCompleted(todoList : [Todo], error : String?)
     func postListCallCompleted(postList : [Post], error : String?)
 }
 
 struct NewsListPresenter {
     
-    weak var delegate : TodoListDelegate?
+    weak var delegate : NewsListDelegate?
     
     func getTodoList() {
         Alamofire.request(TODO_LIST_API).responseJSON { (response) in
-            if response.result.isSuccess {
+            if response.result.isSuccess && response.data != nil {
                 var newsListArray = [Todo]()
                 do {
                     newsListArray = try JSONDecoder().decode([Todo].self, from: response.data!)
 //                    print(newsListArray)
                     self.delegate?.todoListCallCompleted(todoList: newsListArray, error: nil)
-                    self.saveTodoListToCoreData(todoListArray: newsListArray)
+                    self.saveTodoListToDB(todoListArray: newsListArray)
                 }
                 catch let error {
                     self.delegate?.todoListCallCompleted(todoList: newsListArray, error: error.localizedDescription)
@@ -39,13 +39,13 @@ struct NewsListPresenter {
     
     func getPostList() {
         Alamofire.request(POST_LIST_API).responseJSON { (response) in
-            if response.result.isSuccess {
+            if response.result.isSuccess && response.data != nil {
                 var postListArray = [Post]()
                 do {
                     postListArray = try JSONDecoder().decode([Post].self, from: response.data!)
                     self.delegate?.postListCallCompleted(postList: postListArray, error: nil)
 //                    print(postListArray)
-                    self.savePostListToCoreData(postListArray: postListArray)
+                    self.savePostListToDB(postListArray: postListArray)
                 }
                 catch let error {
                     print(error)
@@ -58,7 +58,7 @@ struct NewsListPresenter {
     
     // MARK - save todoList to database
     
-    func saveTodoListToCoreData(todoListArray : [Todo]) {
+    func saveTodoListToDB(todoListArray : [Todo]) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -81,7 +81,7 @@ struct NewsListPresenter {
     
     // MARK - save postList to database
     
-    func savePostListToCoreData(postListArray : [Post]) {
+    func savePostListToDB(postListArray : [Post]) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -119,7 +119,6 @@ struct NewsListPresenter {
             }
             self.delegate?.todoListCallCompleted(todoList: todoArray, error: nil)
         } catch {
-            print("Failed")
             self.delegate?.todoListCallCompleted(todoList: todoArray, error: "Failed to fetch data")
         }
          var postArray = [Post]()
@@ -132,7 +131,6 @@ struct NewsListPresenter {
             }
             self.delegate?.postListCallCompleted(postList: postArray, error: nil)
         } catch {
-            print("Failed")
             self.delegate?.postListCallCompleted(postList: postArray, error: "Failed to fetch data")
         }
     }
