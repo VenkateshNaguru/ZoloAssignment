@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 
 
 let todoListCellID = "todoListTableViewCellID"
@@ -24,7 +23,6 @@ class NewsListViewController: UIViewController {
     var selectedIndexString = ""
     @IBOutlet private weak var newListTableView: UITableView!
     weak var delegate : NewsDetailTextDelegate?
-    var hud : MBProgressHUD?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,9 +36,6 @@ class NewsListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-        hud?.labelText = "Loading..."
-        hud?.detailsLabelText = "Please wait..."
         DispatchQueue.global(qos: .userInitiated).sync {
             self.newsListPresenter.loadNewsFromDB()
         }
@@ -73,7 +68,6 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
             todoArray = todoList
             DispatchQueue.main.async {
                 self.newListTableView.reloadData()
-                self.hud?.hide(true)
             }
         }
         else {
@@ -91,7 +85,6 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
             postArray = postList
             DispatchQueue.main.async {
                 self.newListTableView.reloadData()
-                self.hud?.hide(true)
             }
         }
     }

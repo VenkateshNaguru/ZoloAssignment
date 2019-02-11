@@ -7,7 +7,6 @@ target 'ZoloAssignment' do
 
   # Pods for ZoloAssignment
     pod 'Alamofire', '~> 4.7'
-    pod 'MBProgressHUD', '~> 0.8'
   target 'ZoloAssignmentTests' do
     inherit! :search_paths
     # Pods for testing
