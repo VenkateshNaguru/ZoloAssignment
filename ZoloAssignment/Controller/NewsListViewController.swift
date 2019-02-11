@@ -12,9 +12,6 @@ import UIKit
 let todoListCellID = "todoListTableViewCellID"
 let postListCellID = "postListTableViewCellID"
 
-protocol NewsDetailTextDelegate : class {
-    func NewsDetailTextDelegate(title : String, body : String)
-}
 
 class NewsListViewController: UIViewController {
     private(set) var todoArray = [Todo]()
@@ -22,7 +19,6 @@ class NewsListViewController: UIViewController {
     private var newsListPresenter = NewsListPresenter()
     var selectedIndexString = ""
     @IBOutlet private weak var newListTableView: UITableView!
-    weak var delegate : NewsDetailTextDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -46,7 +42,9 @@ class NewsListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "newsDetailSegue" {
             if let destination = segue.destination as? NewsDetailViewController {
-                self.delegate = destination
+                let (title, body) = sender as! (String, String)
+                destination.newsTitleString = title
+                destination.newsBodyString = body
             }
         }
     }
@@ -90,7 +88,7 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, T
     }
     
     func selectedIndexNewsDetailText(newsTitle: String, newsBody: String) {
-        self.delegate?.NewsDetailTextDelegate(title : newsTitle, body : newsBody)
+        performSegue(withIdentifier: "newsDetailSegue", sender: (newsTitle, newsBody))
     }
     
     

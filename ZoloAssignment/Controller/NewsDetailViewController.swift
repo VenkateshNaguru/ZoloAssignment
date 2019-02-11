@@ -45,12 +45,3 @@ class NewsDetailViewController: UIViewController {
 
 }
 
-
-extension NewsDetailViewController : NewsDetailTextDelegate {
-    func NewsDetailTextDelegate(title: String, body: String) {
-        newsTitleString = title
-        newsBodyString = body
-    }
-    
-    
-}
