@@ -17,7 +17,7 @@ class NewsListViewController: UIViewController {
     private(set) var todoArray = [Todo]()
     private(set) var postArray = [Post]()
     private var newsListPresenter = NewsListPresenter()
-    @IBOutlet weak var newsListActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var newsListActivityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var newListTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()

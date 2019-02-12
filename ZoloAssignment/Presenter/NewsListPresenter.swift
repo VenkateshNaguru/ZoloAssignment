@@ -58,7 +58,7 @@ struct NewsListPresenter {
     
     // MARK - save todoList to database
     
-    func saveTodoListToDB(todoListArray : [Todo]) {
+    private func saveTodoListToDB(todoListArray : [Todo]) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -81,7 +81,7 @@ struct NewsListPresenter {
     
     // MARK - save postList to database
     
-    func savePostListToDB(postListArray : [Post]) {
+    private func savePostListToDB(postListArray : [Post]) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
