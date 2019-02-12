@@ -12,21 +12,21 @@ class NewsDetailViewController: UIViewController {
 
     var selectedPost : Post?
     
-    
-    @IBOutlet private weak var newsDetailLabel: UILabel! {
+    @IBOutlet weak var newsDetailTextView: UITextView! {
         didSet {
             if selectedPost != nil {
-                let fontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 28)]
-                
-                let newsString = NSMutableAttributedString(string: " \((selectedPost?.title)!) \n ", attributes: fontAttribute as [NSAttributedString.Key : Any] )
-                let fontAttributeDetail = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
-                let bodyString = NSMutableAttributedString(string: (selectedPost?.body)!, attributes: fontAttributeDetail as [NSAttributedString.Key : Any] )
+                let fontAttribute : [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 28)]
+                let newsString = NSMutableAttributedString(string: " \((selectedPost?.title)!) \n ", attributes: fontAttribute )
+                let fontAttributeDetail : [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+                let bodyString = NSMutableAttributedString(string: (selectedPost?.body)!, attributes: fontAttributeDetail)
                 newsString.append(bodyString)
-                newsDetailLabel.attributedText = newsString
-                newsDetailLabel.sizeToFit()
+                newsDetailTextView.attributedText = newsString
+                newsDetailTextView.sizeToFit()
             }
         }
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

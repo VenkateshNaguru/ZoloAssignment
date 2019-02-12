@@ -21,11 +21,14 @@ class NewsListViewController: UIViewController {
     @IBOutlet private weak var newListTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        newsListPresenter.delegate = self
+        DispatchQueue.global(qos: .userInitiated).sync {
+            self.newsListPresenter.loadNewsFromDB()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        newsListPresenter.delegate = self
         self.newListTableView.separatorStyle = .none
     }
     
@@ -34,9 +37,6 @@ class NewsListViewController: UIViewController {
         super.viewDidAppear(animated)
         self.newsListActivityIndicator.isHidden = false
         self.newsListActivityIndicator.startAnimating()
-        DispatchQueue.global(qos: .userInitiated).sync {
-            self.newsListPresenter.loadNewsFromDB()
-        }
         newListTableView.register(TodoListTableViewCell.self, forCellReuseIdentifier: todoListCellID)
         newListTableView.register(PostListTableViewCell.self, forCellReuseIdentifier: postListCellID)
     }
