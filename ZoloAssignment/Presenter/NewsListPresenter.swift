@@ -22,15 +22,15 @@ struct NewsListPresenter {
     func getTodoList() {
         Alamofire.request(TODO_LIST_API).responseJSON { (response) in
             if response.result.isSuccess && response.data != nil {
-                var newsListArray = [Todo]()
+                var todoListArray = [Todo]()
                 do {
-                    newsListArray = try JSONDecoder().decode([Todo].self, from: response.data!)
+                    todoListArray = try JSONDecoder().decode([Todo].self, from: response.data!)
 //                    print(newsListArray)
-                    self.delegate?.todoListCallCompleted(todoList: newsListArray, error: nil)
-                    self.saveTodoListToDB(todoListArray: newsListArray)
+                    self.delegate?.todoListCallCompleted(todoList: todoListArray, error: nil)
+                    self.saveTodoListToDB(todoListArray: todoListArray)
                 }
                 catch let error {
-                    self.delegate?.todoListCallCompleted(todoList: newsListArray, error: error.localizedDescription)
+                    self.delegate?.todoListCallCompleted(todoList: todoListArray, error: error.localizedDescription)
                 }
             }
         }
@@ -64,12 +64,12 @@ struct NewsListPresenter {
         
         for eachElement in todoListArray {
             let entity = NSEntityDescription.entity(forEntityName: "TodoEntity", in: context)
-            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            let newTodoItem = NSManagedObject(entity: entity!, insertInto: context)
             
-            newUser.setValue(eachElement.id, forKey: "id")
-            newUser.setValue(eachElement.userId, forKey: "userId")
-            newUser.setValue(eachElement.title, forKey: "title")
-            newUser.setValue(eachElement.completed, forKey: "completed")
+            newTodoItem.setValue(eachElement.id, forKey: "id")
+            newTodoItem.setValue(eachElement.userId, forKey: "userId")
+            newTodoItem.setValue(eachElement.title, forKey: "title")
+            newTodoItem.setValue(eachElement.completed, forKey: "completed")
         }
  
         do {
@@ -87,12 +87,12 @@ struct NewsListPresenter {
         
         for eachElement in postListArray {
             let entity = NSEntityDescription.entity(forEntityName: "PostEntity", in: context)
-            let newUser = NSManagedObject(entity: entity!, insertInto: context)
+            let newPost = NSManagedObject(entity: entity!, insertInto: context)
             
-            newUser.setValue(eachElement.id, forKey: "id")
-            newUser.setValue(eachElement.userId, forKey: "userId")
-            newUser.setValue(eachElement.title, forKey: "title")
-            newUser.setValue(eachElement.body, forKey: "body")
+            newPost.setValue(eachElement.id, forKey: "id")
+            newPost.setValue(eachElement.userId, forKey: "userId")
+            newPost.setValue(eachElement.title, forKey: "title")
+            newPost.setValue(eachElement.body, forKey: "body")
         }
         
         do {

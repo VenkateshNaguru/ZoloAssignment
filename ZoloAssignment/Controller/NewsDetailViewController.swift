@@ -10,19 +10,20 @@ import UIKit
 
 class NewsDetailViewController: UIViewController {
 
-    var newsTitleString = ""
-    var newsBodyString = ""
+    var selectedPost : Post?
     
     
     @IBOutlet weak var newsDetailLabel: UILabel! {
         didSet {
-            let fontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 28)]
-            let newsString = NSMutableAttributedString(string: " \(newsTitleString) \n ", attributes: fontAttribute as [NSAttributedString.Key : Any] )
-            let fontAttributeDetail = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
-            let bodyString = NSMutableAttributedString(string: newsBodyString, attributes: fontAttributeDetail as [NSAttributedString.Key : Any] )
-            newsString.append(bodyString)
-            newsDetailLabel.attributedText = newsString
-            newsDetailLabel.sizeToFit()
+            if selectedPost != nil {
+                let fontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 28)]
+                let newsString = NSMutableAttributedString(string: " \(String(describing: selectedPost?.title)) \n ", attributes: fontAttribute as [NSAttributedString.Key : Any] )
+                let fontAttributeDetail = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
+                let bodyString = NSMutableAttributedString(string: (selectedPost?.body)!, attributes: fontAttributeDetail as [NSAttributedString.Key : Any] )
+                newsString.append(bodyString)
+                newsDetailLabel.attributedText = newsString
+                newsDetailLabel.sizeToFit()
+            }
         }
     }
     

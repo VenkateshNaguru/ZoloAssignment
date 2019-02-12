@@ -11,7 +11,7 @@ import UIKit
 let postListCollectionViewCellID = "postListCollectionViewCellID"
 
 protocol SelectedIndexDelegate : class {
-    func selectedIndexNewsDetail(newsTitle : String, newsBody : String)
+    func selectedIndexNewsDetail(selectedPost : Post)
 }
 
 class PostListTableViewCell: UITableViewCell {
@@ -60,7 +60,7 @@ extension PostListTableViewCell : UICollectionViewDataSource, UICollectionViewDe
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.delegate?.selectedIndexNewsDetail(newsTitle : postArray[indexPath.row].title, newsBody : postArray[indexPath.row].body)
+        self.delegate?.selectedIndexNewsDetail(selectedPost : postArray[indexPath.row])
     }
     
     

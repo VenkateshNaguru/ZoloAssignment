@@ -17,6 +17,7 @@ class NewsListViewController: UIViewController {
     private(set) var todoArray = [Todo]()
     private(set) var postArray = [Post]()
     private var newsListPresenter = NewsListPresenter()
+    @IBOutlet weak var newsListActivityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var newListTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,8 @@ class NewsListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        self.newsListActivityIndicator.isHidden = false
+        self.newsListActivityIndicator.startAnimating()
         DispatchQueue.global(qos: .userInitiated).sync {
             self.newsListPresenter.loadNewsFromDB()
         }
@@ -42,9 +44,7 @@ class NewsListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "newsDetailSegue" {
             if let destination = segue.destination as? NewsDetailViewController {
-                let (title, body) = sender as! (String, String)
-                destination.newsTitleString = title
-                destination.newsBodyString = body
+                destination.selectedPost = sender as? Post
             }
         }
     }
@@ -55,6 +55,10 @@ class NewsListViewController: UIViewController {
 // MARK - Table View and Api calls delegates
 
 extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, NewsListDelegate, SelectedIndexDelegate {
+    func selectedIndexNewsDetail(selectedPost: Post) {
+        performSegue(withIdentifier: "newsDetailSegue", sender: selectedPost)
+    }
+    
     
     func todoListCallCompleted(todoList: [Todo], error: String?) {
         
@@ -65,7 +69,7 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, N
         if todoList.count > 0 {
             todoArray = todoList
             DispatchQueue.main.async {
-                self.newListTableView.reloadData()
+                self.updateUI()
             }
         }
         else {
@@ -84,16 +88,18 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, N
         if postList.count > 0 {
             postArray = postList
             DispatchQueue.main.async {
-                self.newListTableView.reloadData()
+                self.updateUI()
             }
         }
     }
     
-    func selectedIndexNewsDetail(newsTitle: String, newsBody: String) {
-        performSegue(withIdentifier: "newsDetailSegue", sender: (newsTitle, newsBody))
+    func updateUI() {
+        self.newsListActivityIndicator.stopAnimating()
+        if !self.newsListActivityIndicator.isHidden {
+            self.newsListActivityIndicator.isHidden = true
+        }
+        self.newListTableView.reloadData()
     }
-    
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -138,12 +144,14 @@ extension NewsListViewController : UITableViewDelegate, UITableViewDataSource, N
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
+        if section == 0 && todoArray.count > 0{
              return "Text Data"
         }
-        else {
+        else if postArray.count > 0 {
             return "Text Data with Image"
         }
+        
+        return nil
     }
     
     

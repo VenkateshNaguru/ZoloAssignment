@@ -153,12 +153,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Gyg-KN-Yy3"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="O94-1Q-kF2">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jsI-hH-X3i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3Ia-Wp-1WQ"/>
+                            <constraint firstItem="O94-1Q-kF2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVm-yL-ysA"/>
                             <constraint firstItem="jsI-hH-X3i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h7C-fG-Yk1"/>
                             <constraint firstItem="jsI-hH-X3i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iGT-T3-Jgi"/>
+                            <constraint firstItem="O94-1Q-kF2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rln-MU-uFc"/>
                             <constraint firstItem="jsI-hH-X3i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sO7-Nb-I8Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -166,6 +171,7 @@
                     <navigationItem key="navigationItem" title="Assignment" id="FxM-XZ-5OT"/>
                     <connections>
                         <outlet property="newListTableView" destination="jsI-hH-X3i" id="bAS-Gv-iQt"/>
+                        <outlet property="newsListActivityIndicator" destination="O94-1Q-kF2" id="eSi-oX-nY7"/>
                         <segue destination="Nff-gV-tYJ" kind="show" identifier="newsDetailSegue" id="GCt-bQ-pfN"/>
                     </connections>
                 </viewController>
