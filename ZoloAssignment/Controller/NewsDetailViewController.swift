@@ -13,11 +13,12 @@ class NewsDetailViewController: UIViewController {
     var selectedPost : Post?
     
     
-    @IBOutlet weak var newsDetailLabel: UILabel! {
+    @IBOutlet private weak var newsDetailLabel: UILabel! {
         didSet {
             if selectedPost != nil {
                 let fontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 28)]
-                let newsString = NSMutableAttributedString(string: " \(String(describing: selectedPost?.title)) \n ", attributes: fontAttribute as [NSAttributedString.Key : Any] )
+                
+                let newsString = NSMutableAttributedString(string: " \((selectedPost?.title)!) \n ", attributes: fontAttribute as [NSAttributedString.Key : Any] )
                 let fontAttributeDetail = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
                 let bodyString = NSMutableAttributedString(string: (selectedPost?.body)!, attributes: fontAttributeDetail as [NSAttributedString.Key : Any] )
                 newsString.append(bodyString)
